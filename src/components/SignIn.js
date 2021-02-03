@@ -9,6 +9,58 @@ export default function Login() {
     const [email, setEmail] = useState("")
     const [password, setPass] = useState("")
 
+    function validateEmail() {
+        var emailID = email;
+
+        let atpos = emailID.indexOf("@");
+        let dotpos = emailID.indexOf(".");
+
+        if (atpos < 1 || (dotpos - atpos < 2)) {
+            return false;
+        }
+        return (true);
+    }
+
+    function ValibatePassword() {
+        var myInput = password
+        let test = false
+        var lowerCaseLetters = /[a-z]/g;
+        if (myInput.match(lowerCaseLetters)) {
+            test = true
+        } else {
+            test = false
+        }
+
+        var upperCaseLetters = /[A-Z]/g;
+        if (myInput.match(upperCaseLetters)) {
+            test = true
+        } else {
+            test = false
+        }
+
+        var numbers = /[0-9]/g;
+        if (myInput.match(numbers)) {
+            test = true
+        } else {
+            test = false
+        }
+
+        if (myInput.length >= 8) {
+            test = true
+        } else {
+            test = false
+        }
+        return (test)
+    }
+
+    const onsubmit = () => {
+        const emailValidation = validateEmail()
+        const formValidation = ValibatePassword()
+        console.log(emailValidation)
+        console.log(formValidation)
+        console.log(firstName)
+    }
+
     return (
         <div>
             <div className="row header">
@@ -36,13 +88,13 @@ export default function Login() {
                 </div>
                 <div className="row ">
                     <div className="col-md-2"></div>
-                    <div className="col-md-8 text-center input-wrapper"><input type="text" className="inputLabel in" placeholder="User Name" /></div>
+                    <div className="col-md-8 text-center input-wrapper"><input type="text" className="inputLabel in" placeholder="User Name" onChange={(e) => setFirstName(e.target.value)} /></div>
                     <div className="col-md-2"></div>
                 </div>
                 {/* <input type="text" /> */}
                 <div className="row ">
                     <div className="col-md-2"></div>
-                    <div className="col-md-8 text-center input-wrapper"><input type="password" className="inputLabel in" placeholder="Password" /></div>
+                    <div className="col-md-8 text-center input-wrapper"><input type="password" className="inputLabel in" placeholder="Password" onChange={(e) => setPass(e.target.value)} /></div>
                     <div className="col-md-2"></div>
                 </div>
                 <br />
@@ -64,7 +116,7 @@ export default function Login() {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-3"></div>
-                        <div className="col-md-6 text-center"><button className="btn btn-primary">Sign up for free</button></div>
+                        <div className="col-md-6 text-center"><button className="btn btn-primary" onClick={() => onsubmit()}>Sign up for free</button></div>
                         <div className="col-md-3"></div>
 
                     </div>

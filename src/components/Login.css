@@ -1,0 +1,76 @@
+.header{
+    background-image: url(https://app.zeplin.io/img/icZeplin.svg), url(https://app.zeplin.io/img/bgPath.svg), url(https://app.zeplin.io/img/bgPath.svg), url(https://app.zeplin.io/img/bgPath.svg), url(https://app.zeplin.io/img/bgPath.svg), url(https://app.zeplin.io/img/bgPath.svg);
+    background-position: right calc(18.75vw + 18px) top 54px, top 43px right calc(18.75vw + 50px), top 43px right calc(18.75vw + 1256px), top 43px right calc(18.75vw + 2462px), top 43px right calc(18.75vw + 3668px), top 43px right calc(18.75vw + 4874px);
+    background-repeat: no-repeat;
+    padding-top: 124px;
+    
+}
+
+.head{
+    line-height: 48px;
+    font-size: 36px;
+    font-weight: 300;
+    color: #554d56;
+}
+
+.loginWithGoogle{
+    width: 360px;
+    height: 48px;
+    border-radius: 2px;
+    border: solid 1px #c1bec1;
+    margin: 48px 0 24px;
+}
+
+
+
+.loginText{
+    font-size: 18px;
+    line-height: 16px;
+    color: #979197;
+    margin-left: 18px;
+    font-weight: 500
+}
+
+.in{
+    line-height: 24px;
+    font-size: 18px;
+    color: #554d56;
+   width: 100%;
+    max-width: 392px;
+    border: none;
+  border-bottom: 1px solid #554d56;
+ 
+}
+
+.input-wrapper{
+    
+    padding: 35px 16px 8px
+}
+.inputLabel{
+    
+    opacity: 0.8;
+    font-size: 18px;
+    color: #979197;
+    
+}
+
+
+
+
+.inputset{
+    line-height: 19px;
+    font-size: 14px;
+    color: #979197;
+
+}
+
+.btn-primary{
+    max-width: 400px;
+    width: 100%;
+    font-size: 18px;
+    height: 60px;
+    margin: 16px 16px 16px;
+    background-color: #419bf9;
+    border-radius: 2px;
+    
+}
